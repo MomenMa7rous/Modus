@@ -1,0 +1,84 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
+
+header {
+  position: relative;
+  z-index: 1000000;
+  background: #FFF;
+  padding: 20px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    .logo {
+      max-width: 130px;
+      img {
+        width: 100%;
+      }
+    }
+    nav.nav {
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        li {
+          a {
+            text-transform: uppercase;
+            font-size: 13px;
+            transition: .2s;
+            &:hover {
+              color: $secondaryColor;
+            }
+          }
+        }
+      }
+      @include sm {
+        display: none;
+      }
+    }
+    button.mobile-nav-btn {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 30px;
+      display: none;
+      cursor: pointer;
+      @include sm {
+        display: block;
+      }
+    }
+    nav.mobile-nav {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(100%);
+      width: 100%;
+      background: #FFF;
+      z-index: 1000000;
+      overflow: hidden;
+      transition: .4s;
+      ul {
+        width: 100%;
+        li {
+          a {
+            padding: 20px 0;
+            display: block;
+            transition: .2s;
+            border-bottom: 1px solid $secondaryColor;
+            width: 100%;
+            &:hover {
+              padding-left: 10px;
+              color: $secondaryColor;
+            }
+          }
+        }
+      }
+      @include sm {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use '../abstracts/media-queries' as *;
+@use '../abstracts/mixins' as *;
+
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+  @include sm {
+    width: 100%;
+  }
+  @include md {
+    max-width: $md;
+  }
+  @include lg {
+    max-width: $lg;
+  }
+  @include xl {
+    max-width: $xl;
+  }
+  @include xxl {
+    max-width: $xxl;
+  }
+}
