@@ -217,6 +217,41 @@ header .container nav.mobile-nav ul li a:hover {
   }
 }
 
+footer {
+  background-color: #04a3ce;
+  padding: 40px 0;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 640px) {
+  footer .container {
+    gap: 40px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+footer .container h5 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+}
+footer .container h5 span, footer .container h5 a {
+  color: yellow;
+}
+footer .container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+footer .container ul li a {
+  color: #fff;
+}
+
 section.hero {
   padding: 130px 0;
   position: relative;

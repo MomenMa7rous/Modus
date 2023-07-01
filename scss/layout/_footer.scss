@@ -1,0 +1,37 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
+
+footer {
+  background-color: $secondaryColor;
+  padding: 40px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    @include sm {
+      gap: 40px;
+      flex-direction: column;
+      text-align: center;
+    }
+    h5 {
+      color: #fff;
+      font-size: 16px;
+      line-height: 1.6;
+      span, a {
+        color: yellow;
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      li {
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
