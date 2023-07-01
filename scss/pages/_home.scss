@@ -202,3 +202,92 @@ section.clients {
     }
   }
 }
+
+section.contact {
+  background-color: $contactSectionColor;
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    .box {
+      padding: 40px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      h2 {
+        color: #fff;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 50px;
+          height: 2px;
+          background-color: $secondaryColor;
+        }
+      }
+    }
+    @include sm {
+      flex-direction: column;
+    }
+    @include md {
+      flex-direction: column;
+    }
+    @include lg {
+      flex-direction: row;
+    }
+    .about {
+      p {
+        font-size: 15px;
+        font-weight: 100;
+        color: #bbb;
+      }
+    }
+    .form {
+      form {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 20px;
+        input, textarea {
+          color: #fff;
+          width: 100%;
+          resize: none;
+          padding: 15px 0;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          border-bottom: 2px solid $secondaryColor;
+        }
+        textarea {
+          min-height: 150px;
+        }
+        button {
+          padding: 5px 10px;
+          background-color: $secondaryColor;
+          color: #fff;
+          font-size: 18px;
+          font-weight: 500;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: .2s;
+          border: 1px solid $secondaryColor;
+          &:hover {
+            background-color: #fff;
+            color: $primaryColor;
+            border: 1px solid $primaryColor;
+          }
+        }
+      }
+    }
+  }
+}
