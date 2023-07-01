@@ -62,6 +62,10 @@ section {
   padding: 80px 0;
 }
 
+section:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
 .container {
   padding: 0 20px;
   margin: 0 auto;
@@ -363,6 +367,42 @@ section.portfolio .container .wrapper .box .info ul li a {
   section.portfolio .container .wrapper .box img {
     width: 100%;
   }
+}
+
+section.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+section.services .container .srv {
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+}
+section.services .container .srv i {
+  font-size: 40px;
+  color: #000;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+section.services .container .srv i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background-color: #04a3ce;
+}
+section.services .container .srv h3 {
+  margin-bottom: 20px;
+}
+section.services .container .srv p {
+  font-size: 15px;
+  color: #637988;
+  font-weight: 100;
 }
 
 /*# sourceMappingURL=style.css.map */

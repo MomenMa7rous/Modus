@@ -152,3 +152,41 @@ section.portfolio {
     }
   }
 }
+
+section.services {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    .srv {
+      text-align: center;
+      background-color: #fff;
+      padding: 30px;
+      i {
+        font-size: 40px;
+        color: #000;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 20px;
+          height: 2px;
+          background-color: $secondaryColor;
+        }
+      }
+      h3 {
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 15px;
+        color: $tertairyColor;
+        font-weight: 100;
+      }
+    }
+  }
+}

@@ -46,3 +46,7 @@ a {
 section {
   padding: $sectionPadding 0;
 }
+
+section:nth-child(even) {
+  background-color: #f4f4f4;
+}
