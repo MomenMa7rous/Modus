@@ -59,3 +59,96 @@ section.hero {
     }
   }
 }
+
+section.portfolio {
+  .container {
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      .box {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        &:hover {
+          .info {
+            transform: translateY(0);
+          }
+        }
+        .info {
+          transition: .2s;
+          transform: translateY(100%);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background-color: $secondaryColor;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          gap: 20px;
+          padding: 40px 20px;
+          h3 {
+            color: #fff;
+          }
+          p {
+            color: #fff;
+            font-size: 15px;
+          }
+          ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            li {
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+      @include sm {
+        grid-auto-flow: column;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 0;
+        .box {
+          overflow: visible;
+          img {
+            width: fit-content;
+          }
+        }
+      }
+      @include md {
+        grid-auto-flow: column;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 0;
+        .box {
+          overflow: visible;
+          img {
+            width: fit-content;
+          }
+        }
+      }
+      @include lg {
+        grid-auto-flow: row;
+        overflow-x: hidden;
+        overflow-y: visible;
+        gap: 20px;
+        .box {
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
