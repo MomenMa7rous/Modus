@@ -58,6 +58,10 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 
+section {
+  padding: 60px 0;
+}
+
 .container {
   padding: 0 20px;
   margin: 0 auto;
@@ -89,7 +93,9 @@ a {
 }
 
 header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
   z-index: 1000000;
   background: #FFF;
   padding: 20px 0;
@@ -153,11 +159,13 @@ header .container nav.mobile-nav {
 header .container nav.mobile-nav ul {
   width: 100%;
 }
+header .container nav.mobile-nav ul li:not(:last-of-type) a {
+  border-bottom: 1px solid #00c7fc;
+}
 header .container nav.mobile-nav ul li a {
   padding: 20px 0;
   display: block;
   transition: 0.2s;
-  border-bottom: 1px solid #00c7fc;
   width: 100%;
 }
 header .container nav.mobile-nav ul li a:hover {
@@ -167,6 +175,67 @@ header .container nav.mobile-nav ul li a:hover {
 @media (max-width: 640px) {
   header .container nav.mobile-nav {
     display: block;
+  }
+}
+
+section.hero {
+  padding: 130px 0;
+  position: relative;
+  background: url("../imgs/header.jpg");
+  z-index: 1;
+}
+section.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.7490196078);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+section.hero .container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+}
+section.hero .container h1, section.hero .container h5, section.hero .container a {
+  color: #fff;
+}
+section.hero .container .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+section.hero .container .btns a {
+  display: block;
+  padding: 15px 30px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.2s;
+}
+section.hero .container .btns a.theme {
+  background-color: #00c7fc;
+  border-color: #00c7fc;
+}
+section.hero .container .btns a:hover {
+  background-color: #fff;
+  color: #231f20;
+  border-color: #fff;
+}
+@media (max-width: 640px) {
+  section.hero .container .btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+  section.hero .container .btns a {
+    width: 100%;
   }
 }
 

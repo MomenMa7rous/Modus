@@ -2,7 +2,9 @@
 @use '../abstracts/mixins' as *;
 
 header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
   z-index: 1000000;
   background: #FFF;
   padding: 20px 0;
@@ -63,11 +65,13 @@ header {
       ul {
         width: 100%;
         li {
+          &:not(:last-of-type) a {
+            border-bottom: 1px solid $secondaryColor;
+          }
           a {
             padding: 20px 0;
             display: block;
             transition: .2s;
-            border-bottom: 1px solid $secondaryColor;
             width: 100%;
             &:hover {
               padding-left: 10px;
